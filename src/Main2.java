@@ -5,8 +5,8 @@ public class Main2 {
         try {
             int INPUT_SIZE_MAX = 1000000;
             byte[] input = new byte[INPUT_SIZE_MAX];
-            PresentationLayer presentationLayer = new PresentationLayer();
-            presentationLayer.receive(input, input.length);
+            DataLayer dataLayer = new Layer6();
+            dataLayer.receive(input, input.length);
 
             ByteArrayInputStream bis = new ByteArrayInputStream(input);
             ObjectInputStream ois = new ObjectInputStream (bis);

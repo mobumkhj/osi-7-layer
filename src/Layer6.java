@@ -1,4 +1,4 @@
-public class PresentationLayer {
+public class Layer6 implements DataLayer {
 
     public void send(byte[] b, int len) {
     }

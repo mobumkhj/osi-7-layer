@@ -3,7 +3,7 @@ import java.io.*;
 public class Main {
     public static void main(String[] args) {
         try {
-            PresentationLayer presentationLayer = new PresentationLayer();
+            DataLayer dataLayer = new Layer6();
 
             ByteArrayOutputStream bos = new ByteArrayOutputStream();
             ObjectOutputStream oos = new ObjectOutputStream(bos);
@@ -11,7 +11,7 @@ public class Main {
             oos.writeObject(message);
             oos.flush();
             byte[] output = bos.toByteArray();
-            presentationLayer.send(output, output.length);
+            dataLayer.send(output, output.length);
 /*
             ByteArrayInputStream bis = new ByteArrayInputStream(output);
             ObjectInputStream ois = new ObjectInputStream (bis);
